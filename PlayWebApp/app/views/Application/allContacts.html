@@ -1,0 +1,64 @@
+#{set title:'Contacts' /}
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<form action="@{Application.findTaggedWith(tagid)}" method="GET">
+	<label for="tag">Tag: </label> 
+	
+	<!-- #{select 'tag', items:tags, valueProperty:'id', labelProperty:'name', value:'0', id:'tagid' /} -->
+	
+	
+	<select id="tag" name="tagid" value='0'>
+	#{list items:tags, as:'tag'}
+		<option value="${tag.id}">${tag.name}</option>
+	#{/list}
+	</select>
+	
+	<input type="submit" value="Search" />
+</form>
+
+<table>
+  <tr>
+  	<th>Company</th>
+  	<th>Title</th>
+    <th>Full Name</th>
+    <th>Tags</th>
+  </tr>
+  
+  	#{list items:persons, as:'person'}
+  	<tr>
+  		<td>
+  			${person.company}
+	    </td>
+	    <td>
+  			${person.title}
+	    </td>
+	    <td>
+	    	${person.lastName}, ${person.firstName}
+	    </td>
+	   	<td>
+	    	#{list items: person.tags, as:'tag'}
+	    		${tag.name}${tag_isLast ? '' : ', '}
+			#{/list}
+		</td>
+	</tr>
+	#{/list}
+</table>
+
+    

@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+ 
+<form action="@{Application.allContacts(token, tag)}" method="GET">
+	#{ifErrors}
+	    <p class="error">
+	        ${errors[0]}
+	    </p>
+	#{/ifErrors}
+	<p>
+		<label for="token">Token ID: </label> 
+		<input type="text" name="token" id="token" />
+	</p>
+	<p>
+		<label for="token">Tag Name: </label> 
+		<input type="text" name="tag" id="tag"/>
+	</p>
+	
+    <input type="submit" value="Get Contacts" />
+</form>

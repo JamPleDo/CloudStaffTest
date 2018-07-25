@@ -1,0 +1,74 @@
+Listening for transport dt_socket at address: 8000
+19:33:50,770 INFO  ~ Starting C:\Users\Seambest\Documents\opt\Play Framework\myApp
+:: loading settings :: url = jar:file:/C:/Users/Seambest/Documents/opt/Play%20Framework/Installer/play-1.4.5/play-1.4.5/framework/lib/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+19:33:51,754 WARN  ~ You're running Play! in DEV mode
+~
+~ Go to http://localhost:9000/@tests to run the tests
+~
+19:33:52,066 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+~ Server is up and running
+19:33:54,834 WARN  ~ Ignoring token : String (static params must be specified as key:'value',...)
+19:33:55,647 ERROR ~ 
+
+@78k32o94j
+Failed to compile template /app/views/errors/500.html
+
+Compilation error (In /app/models/Tag.java around line 3)
+The file /app/models/Tag.java could not be compiled. Error raised is : org.simpleframework.xml.Element cannot be resolved
+
+play.exceptions.CompilationException: org.simpleframework.xml.Element cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:420)
+	at play.classloading.ApplicationClassloader.getAssignableClasses(ApplicationClassloader.java:466)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:32)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:28)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:85)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:180)
+	at play.server.PlayHandler.serve500(PlayHandler.java:836)
+	at Invocation.HTTP Request(Play!)
+19:33:55,709 ERROR ~ 
+
+@78k32o94i
+Internal Server Error (500) for request GET /@tests.list
+
+Compilation error (In /app/models/Tag.java around line 3)
+The file /app/models/Tag.java could not be compiled. Error raised is : org.simpleframework.xml.Element cannot be resolved
+
+play.exceptions.CompilationException: org.simpleframework.xml.Element cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:420)
+	at play.Play.start(Play.java:531)
+	at play.Play.detectChanges(Play.java:659)
+	at play.Invoker$Invocation.init(Invoker.java:209)
+	at Invocation.HTTP Request(Play!)
+19:33:55,709 ERROR ~ 
+
+@78k32o94k
+Error during the 500 response generation
+
+Compilation error (In /app/models/Tag.java around line 3)
+The file /app/models/Tag.java could not be compiled. Error raised is : org.simpleframework.xml.Element cannot be resolved
+
+play.exceptions.CompilationException: org.simpleframework.xml.Element cannot be resolved
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:264)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:678)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:522)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:300)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:420)
+	at play.classloading.ApplicationClassloader.getAssignableClasses(ApplicationClassloader.java:466)
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:362)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:93)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:39)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:28)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:85)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:180)
+	at play.server.PlayHandler.serve500(PlayHandler.java:836)
+	at Invocation.HTTP Request(Play!)
+@KILLED

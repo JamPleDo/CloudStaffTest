@@ -1,0 +1,35 @@
+self: play -> server 0.1
+
+require:
+    - play
+    - com.sun.jersey -> jersey-core 1.7:self: play -> server 0.1
+
+require:
+    - play
+    - com.sun.jersey -> jersey-core 1.7:
+        transitive: false
+    - com.sun.jersey -> jersey-server 1.7:
+        transitive: false
+    - com.sun.jersey -> jersey-json 1.7:
+        transitive: false
+    - javax.ws.rs->jsr311-api 1.1.1
+    - com.fasterxml -> jackson-xml-databind 0.6.0:
+        transitive: false
+    - org.simpleframework - > simple-xml 2.7
+    - org.codehaus.jackson -> jackson-core-asl 1.8.1
+    - org.codehaus.jackson -> jackson-mapper-asl 1.8.1
+    - org.codehaus.jackson -> jackson-jaxrs 1.8.1
+    - org.codehaus.woodstox->stax2-api 3.1.1
+
+
+exclude:
+    - org.slf4j -> slf4j-jdk14
+
+
+repositories:
+    - JavaNet:
+        type: iBiblio
+        root: "http://download.java.net/maven/2/"
+        contains:
+            - com.sun.jersey.* -> *
+
